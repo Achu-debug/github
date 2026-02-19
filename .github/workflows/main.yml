@@ -1,23 +1,23 @@
+name: Sample GitHub Actions Workflow
+
 # When the workflow should run
+
 on:
 push:
-branches: [ "main" ]
+branches: [ &quot;main&quot; ]
 pull_request:
-branches: [ "main" ]
+branches: [ &quot;main&quot; ]
 
 # What jobs to run
 jobs:
 build:
-runs-on:ubuntu-latest# Environment to run in
+runs-on: ubuntu-latest # Environment to run in
 
 steps:
 # Step 1: Checkout the code
--name:Checkoutrepository
-uses:actions/checkout@v4
+- name: Checkout repository
+uses: actions/checkout@v4
 
 # Step 2: Run a simple command
--name:Displaymessage
-run:echo" GitHub Actions workflow is running successfully!"
-
-
-
+- name: Display message
+run: echo &quot;GitHub Actions workflow is running successfully!&quot;
